@@ -8,6 +8,7 @@ $( document ).ready(function(){
         answers: [],
         wronganswers: [],  
     }
+    let btns = $("#answerButtons")
     qanda.questions.push("Does this work?", "Who will win?", "Will Liverpool win?");   // push questions to array
     qanda.answers.push("Yup", "Belgium", "Hell yes!");     // push answer to array
     qanda.wronganswers.push("A", "B", "C");
@@ -23,17 +24,25 @@ $( document ).ready(function(){
     //wronganswer.text(qanda.wronganswers[0]);
 
 
-    for (i = 0; i < qanda.answers.length; i++) {
+    /*for (i = 0; i < qanda.answers.length; i++) {
         var radioBtn = $('<input type="radio">');
         radioBtn.addClass("answer-button");
         radioBtn.attr('name', 'group');
-        radioBtn.attr("data-letter", qanda.answers[i]);
+        radioBtn.text(qanda.answers[i]);
+        //radioBtn.attr("data-letter", qanda.answers[i]);
         //radioBtn.text($(this).attr("data-letter"));     // STUCK HERE TRYING TO GET THE VALUES TO SHOW
         radioBtn.appendTo('#answerButtons');
+    }*/
+
+    for (var i = 0; i < qanda.answers.length; i++) {   // ADD A WRONG & RIGHT ANSWER ATTRIBUTE?
+      var radioBtn = $('<input type="radio">');
+      radioBtn.addClass("answer-button");
+      radioBtn.attr('name', 'group');
+      //radioBtn.attr("data-letter", qanda.answers[i]);
+      radioBtn.text(qanda.answers[i]);   // STUCK HERE TRYING TO GET THE VALUES TO SHOW
+      btns.append(radioBtn);
+
     }
-
-
-    //fridgeMagnet.text($(this).attr("data-letter"));
  
 
 

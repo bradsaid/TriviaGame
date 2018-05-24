@@ -27,10 +27,13 @@ $( document ).ready(function(){
         var radioBtn = $('<input type="radio">');
         radioBtn.addClass("answer-button");
         radioBtn.attr('name', 'group');
-        radioBtn.html(qanda.answers[i]);     // STUCK HERE TRYING TO GET THE VALUES TO SHOW
+        radioBtn.attr("data-letter", qanda.answers[i]);
+        //radioBtn.text($(this).attr("data-letter"));     // STUCK HERE TRYING TO GET THE VALUES TO SHOW
         radioBtn.appendTo('#answerButtons');
     }
 
+
+    //fridgeMagnet.text($(this).attr("data-letter"));
  
 
 

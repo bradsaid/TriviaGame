@@ -9,8 +9,9 @@ $( document ).ready(function(){
         wronganswers: [],  
     }
     let btns = $("#answerButtons")
-    qanda.questions.push("Does this work?", "Who will win?", "Will Liverpool win?");   // push questions to array
-    qanda.answers.push("Yup", "Belgium", "Hell yes!");     // push answer to array
+    
+    qanda.questions.push("Does this work?", "Who will win?", "Will Liverpool win?");  
+    qanda.answers.push("Yup", "Belgium", "Hell yes!");    
     qanda.wronganswers.push("A", "B", "C");
 
     /*function randomOrder() {   // randomize order of questions.. but this will allow for question repetition 
@@ -19,31 +20,32 @@ $( document ).ready(function(){
     }
     randomOrder();*/
 
-    question.text(qanda.questions[0]);
     //answer.text(qanda.answers[0]);
     //wronganswer.text(qanda.wronganswers[0]);
+    
 
-
-    /*for (i = 0; i < qanda.answers.length; i++) {
-        var radioBtn = $('<input type="radio">');
-        radioBtn.addClass("answer-button");
-        radioBtn.attr('name', 'group');
-        radioBtn.text(qanda.answers[i]);
-        //radioBtn.attr("data-letter", qanda.answers[i]);
-        //radioBtn.text($(this).attr("data-letter"));     // STUCK HERE TRYING TO GET THE VALUES TO SHOW
-        radioBtn.appendTo('#answerButtons');
-    }*/
-
-    for (var i = 0; i < qanda.answers.length; i++) {   // ADD A WRONG & RIGHT ANSWER ATTRIBUTE?
-      var radioBtn = $('<input type="radio">');
+    for (var i = 0; i < qanda.questions.length; i++) {   // ADD A WRONG & RIGHT ANSWER ATTRIBUTE?
+      question.text(qanda.questions[i]);  // getting question
+      //let questionsToAnswer = $('<h1>' + qanda.questions[i] + '</h1>');
+      //question.append(questionsToAnswer);
+      let radioBtn = $('<label><input type="radio" name="group">' + qanda.answers[i] + '</label>');  // getting answers
       radioBtn.addClass("answer-button");
-      radioBtn.attr('name', 'group');
-      //radioBtn.attr("data-letter", qanda.answers[i]);
-      radioBtn.text(qanda.answers[i]);   // STUCK HERE TRYING TO GET THE VALUES TO SHOW
+      radioBtn.attr("value", qanda.answers[i]);
+      //let radioBtn1 = $('<label><input type="radio" name="group">' + qanda.wronganswers[i] + '</label>');  // getting answers
+      //radioBtn1.addClass("wrong-answer-button");
       btns.append(radioBtn);
-
+      //btns.append(radioBtn1);
+     
     }
+
+
+
+    /*for (let i = 0; i < qanda.questions.length; i++) {  
+      let questionsToAnswer = $('<h1>' + qanda.questions[i] + '</h1>' + '<label><input type="radio" name="group">' + qanda.answers[i] + '</label>' );
+      question.append(questionsToAnswer);
+    }*/
  
+
 
 
   
@@ -54,7 +56,7 @@ $( document ).ready(function(){
 
 
 
-    
+  }); 
     //console.log(qanda.questions[0]);
     //console.log(qanda.answers[0]);
 
@@ -115,4 +117,3 @@ $( document ).ready(function(){
     });
   
 */
-}); 

@@ -1,12 +1,12 @@
 $( document ).ready(function(){
     let timer = $("#timer");
-    let q1 = "1?";
-    let q2 = "2?";
-    let q3 = "3?";
-    let q1a = "a";
-    let q2a = "b";
-    let q3a = "c";
-    let wrongAnswerArr = ["x", "y", "z", "f", "c"];
+    let q1 = "Who will be France's starting goalkeeper?";
+    let q2 = "Who plays for Manchester United?";
+    let q3 = "Who will be France's starting center forward?";
+    let q1a = "Hugo Lloris";
+    let q2a = "Paul Pogba";
+    let q3a = "Antoine Griezmann";
+    let wrongAnswerArr = ["Kylian Mbappe", "Ousmane Dembele", "Oliver Giroud", "Thomas Lemar", "Nabil Fekir"];
     let wrongAnswerArr1 = [];
     let radio1 = [];
     let radio2 = [];
@@ -18,7 +18,7 @@ $( document ).ready(function(){
 
     $("#start").click( function(){
         $("div").css("visibility", "visible");
-        var counter = 3;
+        var counter = 30;
         setInterval(function() {
           counter--;
            if (counter >= 0) {

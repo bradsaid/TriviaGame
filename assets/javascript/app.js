@@ -17,6 +17,7 @@ $( document ).ready(function(){
     $('#submit').append(submitButton);
 
     $("#start").click( function(){
+        $("div").css("visibility", "visible");
         var counter = 3;
         setInterval(function() {
           counter--;

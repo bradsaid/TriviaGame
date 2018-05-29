@@ -25,6 +25,21 @@ $( document ).ready(function(){
            }
            if (counter === 0) {
               document.getElementById("submit").click();   // TRIGGERS SUBMIT BUTTON CLICK
+              if ($('input[name=group]:checked').length > 0) {
+            } else {
+                wrong++;
+                $('#wrongAnswers').text(wrong);
+            }
+            if ($('input[name=group1]:checked').length > 0) {
+            } else {
+                wrong++;
+                $('#wrongAnswers').text(wrong);
+            }
+            if ($('input[name=group2]:checked').length > 0) {
+            } else {
+                wrong++;
+                $('#wrongAnswers').text(wrong);
+            }
               clearInterval(counter);
             }
           }, 1000);
@@ -71,21 +86,43 @@ $( document ).ready(function(){
     }
     q3Function();
 
+    
+
     $("#submit").click(function () {
-            if ($('input[name="group"]:checked').val() == q1a){
-            right++;
-            $('#correctAnswers').text(right);
-            } else{
+        $("input:radio[name='group']:checked").each(function() {  
+            let answerVal1 = $(this).attr("value");
+            console.log(answerVal1);
+            if (answerVal1 == q1a) {
+                right++;
+                $('#correctAnswers').text(right);
+            } else {
                 wrong++;
                 $('#wrongAnswers').text(wrong);
             }
-            if ($('input[name="group1"]:checked').val() == q2a){
-            right++;
-            $('#correctAnswers').text(right);
-            } else{
+        });
+        $("input:radio[name='group1']:checked").each(function() {
+            let answerVal2 = $(this).attr("value");
+            console.log(answerVal2);
+            if (answerVal2 == q2a) {
+                right++;
+                $('#correctAnswers').text(right);
+            } else {
                 wrong++;
                 $('#wrongAnswers').text(wrong);
             }
+        });
+        /*$("input:radio[name='group2']:checked").each(function() {
+            let answerVal3 = $(this).attr("value");
+            console.log(answerVal3);
+            if (answerVal3 == q3a) {
+                right++;
+                $('#correctAnswers').text(right);
+            } else {
+                wrong++;
+                $('#wrongAnswers').text(wrong);
+            }
+        });*/
+        //$("input:radio[name='group2']:checked").each(function() {
             if ($('input[name="group2"]:checked').val() == q3a){
             right++;
             $('#correctAnswers').text(right);
@@ -93,7 +130,12 @@ $( document ).ready(function(){
                 wrong++;
                 $('#wrongAnswers').text(wrong);
             }
-        }); 
+        });
+
+
+
+  //  });
+    
 }); 
 
 

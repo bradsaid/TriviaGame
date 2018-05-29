@@ -71,29 +71,38 @@ $( document ).ready(function(){
     }
     q3Function();
 
+    
+
     $("#submit").click(function () {
-            if ($('input[name="group"]:checked').val() == q1a){
+        if ($('input[name="group"]:checked').val() == q1a){
             right++;
             $('#correctAnswers').text(right);
-            } else{
+        } else{
                 wrong++;
                 $('#wrongAnswers').text(wrong);
-            }
-            if ($('input[name="group1"]:checked').val() == q2a){
+        }
+        });
+        if ($('input[name="group1"]:checked').val() == q2a){
             right++;
             $('#correctAnswers').text(right);
-            } else{
+        } else{
                 wrong++;
                 $('#wrongAnswers').text(wrong);
-            }
-            if ($('input[name="group2"]:checked').val() == q3a){
+        }
+        });
+        if ($('input[name="group2"]:checked').val() == q3a){
             right++;
             $('#correctAnswers').text(right);
-            } else{
+        } else{
                 wrong++;
                 $('#wrongAnswers').text(wrong);
-            }
-        }); 
+        }
+        });
+
+
+
+
+    
 }); 
 
 

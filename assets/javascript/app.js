@@ -13,12 +13,15 @@ $( document ).ready(function(){
     let right = 0;
     let wrong = 0;
     let randomRadio = "";
+    let counter = 0;
+    let startButton = $('<button>Start Game</button>');
+    $('#start').append(startButton);
     let submitButton = $('<button>Submit</button>');
     $('#submit').append(submitButton);
 
     $("#start").click( function(){
         $("div").css("visibility", "visible");
-        var counter = 30;
+        let counter = 30;
         setInterval(function() {
           counter--;
            if (counter >= 0) {
@@ -94,6 +97,7 @@ $( document ).ready(function(){
                 wrong++;
                 $('#wrongAnswers').text(wrong);
             }
+            $("#timer").text("Time is Up");
         }); 
 }); 
 

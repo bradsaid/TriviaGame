@@ -1,3 +1,36 @@
 div.col  {
     visibility: hidden;
 }
+body {
+    background-image: url("https://images.pexels.com/photos/274506/pexels-photo-274506.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+ }
+
+h1, h3 {
+    text-align: center;
+    padding-top: 15px;
+}
+
+#questions {
+    border-style: solid;
+    border-color:blue;
+    
+}
+
+input[type=radio]{
+    margin-right: 5px;
+    margin-left: 10px;
+  }
+
+#answers1, #answers2, #answers3, #start, #submit {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+}  
+
+#submit {
+    padding-top: 20px;
+}
+

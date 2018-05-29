@@ -5,57 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>French Football Associaton 2018 World Cup Trivia</title>
     <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"-->
-    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"--> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"> 
     <link rel="stylesheet" href="assets/css/style.css"> 
 </head>
 <body>
 
 <div class="container">
-        <button id="start">Start</button>
+        <h1>French Football Associaton 2018 World Cup Trivia</h1>
+        <div id="start"></div>
     <div class="row">
         <div class="col s12">
-           
-            <h1>French Football Associaton 2018 World Cup Trivia</h1>
             <h3>Time Remaining: <span id="timer"></span></h3>
         </div> 
     </div> 
     <div class="row">
-       <div class="col 12">
+       <div class="col 12" id="questions">
            <div id="question1"></div>
            <div id="answers1"></div>
-        </div>
-    <div class="row">
-            <div class="col 12">
-                <div id="question2"></div>
-                <div id="answers2"></div>
-           </div>
+           <div id="question2"></div>
+           <div id="answers2"></div>
+           <div id="question3"></div>
+           <div id="answers3"></div>
+       </div>
     </div> 
     <div class="row">
-        <div class="col 12">
-            <div id="question3"></div>
-            <div id="answers3"></div>
-       </div>
-       <div class="row">
         <div class="col 12">
             <div id="submit"></div>
             <h1>Correct Answers: <span id="correctAnswers"></span></h1>
             <h1>Incorrect Answers: <span id="wrongAnswers"></span></h1>
        </div>
+    </div>   
 </div>      
        
 
            
    
-    </div>    
-</div>
-
+ 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
 <script src="assets/javascript/app.js" type="text/javascript"></script>
-
-
-
-
-
 
 </body>
 </html>

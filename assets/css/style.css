@@ -28,6 +28,7 @@ input[type=radio]{
     justify-content: center;
     align-items: center;
     padding-top: 5px;
+    font-weight: bold;
 }  
 
 #submit {

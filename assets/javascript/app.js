@@ -13,7 +13,7 @@ $( document ).ready(function(){
     let right = 0;
     let wrong = 0;
     let randomRadio = "";
-    let counter = 0;
+    var counter = 0;
     let startButton = $('<button>Start Game</button>');
     $('#start').append(startButton);
     let submitButton = $('<button>Submit</button>');
@@ -21,7 +21,7 @@ $( document ).ready(function(){
 
     $("#start").click( function(){
         $("div").css("visibility", "visible");
-        let counter = 30;
+        var counter = 30;
         setInterval(function() {
           counter--;
            if (counter >= 0) {
@@ -32,6 +32,7 @@ $( document ).ready(function(){
               clearInterval(counter);
             }
           }, 1000);
+        $("#start").css("visibility", "hidden")  
      });
 
     function q1Function() {
@@ -97,7 +98,6 @@ $( document ).ready(function(){
                 wrong++;
                 $('#wrongAnswers').text(wrong);
             }
-            $("#timer").text("Time is Up");
         }); 
 }); 
 

@@ -32,7 +32,33 @@ $( document ).ready(function(){
               clearInterval(counter);
             }
           }, 1000);
-        $("#start").css("visibility", "hidden")  
+        $("#start").css("visibility", "hidden"); 
+        $("#submit").click(function () {
+            counter = 0;
+            $("#timer").text("Time's Up");
+            if ($('input[name="group"]:checked').val() == q1a){
+            right++;
+            $('#correctAnswers').text(right);
+            } else{
+                wrong++;
+                $('#wrongAnswers').text(wrong);
+            }
+            if ($('input[name="group1"]:checked').val() == q2a){
+            right++;
+            $('#correctAnswers').text(right);
+            } else{
+                wrong++;
+                $('#wrongAnswers').text(wrong);
+            }
+            if ($('input[name="group2"]:checked').val() == q3a){
+            right++;
+            $('#correctAnswers').text(right);
+            } else{
+                wrong++;
+                $('#wrongAnswers').text(wrong);
+            }
+        });   
+
      });
 
     function q1Function() {
@@ -76,29 +102,7 @@ $( document ).ready(function(){
     }
     q3Function();
 
-    $("#submit").click(function () {
-            if ($('input[name="group"]:checked').val() == q1a){
-            right++;
-            $('#correctAnswers').text(right);
-            } else{
-                wrong++;
-                $('#wrongAnswers').text(wrong);
-            }
-            if ($('input[name="group1"]:checked').val() == q2a){
-            right++;
-            $('#correctAnswers').text(right);
-            } else{
-                wrong++;
-                $('#wrongAnswers').text(wrong);
-            }
-            if ($('input[name="group2"]:checked').val() == q3a){
-            right++;
-            $('#correctAnswers').text(right);
-            } else{
-                wrong++;
-                $('#wrongAnswers').text(wrong);
-            }
-        }); 
+   
 }); 
 
 
